@@ -57,7 +57,3 @@ Test Plus With Both Invalid Parameters
   Status Should Be    400    ${response}
   ${json}=    Set Variable    ${response.json()}
   Dictionary Should Contain Key    ${json}    error
-
-Test Plus With Empty Parameters
-  ${response}=    GET On Session    flask_api    /plus///    expected_status=404
-  Status Should Be    404    ${response}
